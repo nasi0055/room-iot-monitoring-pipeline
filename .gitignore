@@ -5,3 +5,5 @@ flink/alerting_job/.gradle/
 infra-terraform-aws/.terraform/
 flink/alerting_job/build
 *__pycache__
+*dbt_packages/
+*dbt.log
