@@ -1,0 +1,17 @@
+iot_lakehouse:
+  outputs:
+    dev:
+      database: awsdatacatalog
+      region_name: eu-west-1
+      s3_staging_dir: s3://iot-sensor-dev-logs/dbt-staging/
+      schema: iot-sensor-dev_lake
+      threads: 2
+      type: athena
+    prod:
+      database: awsdatacatalog
+      region_name: eu-west-1
+      s3_staging_dir: s3://iot-sensor-prod-logs/dbt-staging/
+      schema: iot-sensor-prod_lake
+      threads: 2
+      type: athena
+  target: prod

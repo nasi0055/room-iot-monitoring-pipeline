@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: bronze
+    schema: "iot-sensor-prod_lake"
+    tables:
+      - name: bronze_iot_sensor_readings
+      - name: bronze_threshold_breached_alerts
