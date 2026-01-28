@@ -71,3 +71,18 @@ resource "aws_s3_object" "flink_app" {
   source = var.flink_artifact_local_path
   etag   = filemd5(var.flink_artifact_local_path)
 }
+
+# Upload MWAA requirements to S3
+resource "aws_s3_object" "mwaa_requirements" {
+  bucket = aws_s3_bucket.airflow.bucket
+  key    = "requirements/requirements.txt"
+  source = "../airflow/requirements/requirements.txt"
+  etag   = filemd5("../airflow/requirements/requirements.txt")
+}
+
+resource "aws_s3_object" "mwaa_startup_script" {
+  bucket = aws_s3_bucket.airflow.bucket
+  key    = "startup/startup.sh"
+  source = "../airflow/startup/startup.sh"
+  etag   = filemd5("../airflow/startup/startup.sh")
+}
