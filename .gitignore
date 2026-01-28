@@ -1,0 +1,7 @@
+*.DS_Store
+.venv/
+flink/alerting_job/build/tmp/
+flink/alerting_job/.gradle/
+infra-terraform-aws/.terraform/
+flink/alerting_job/build
+*__pycache__
