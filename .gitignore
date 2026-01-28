@@ -4,6 +4,8 @@ flink/alerting_job/build/tmp/
 flink/alerting_job/.gradle/
 infra-terraform-aws/.terraform/
 flink/alerting_job/build
+!flink/alerting_job/build/libs/flink-alerting-job*.jar
+!flink/alerting_job/build/libs/flink-app.zip
 *__pycache__
 *dbt_packages/
 *dbt.log
