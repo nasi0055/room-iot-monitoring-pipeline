@@ -1,0 +1,28 @@
+version: 2
+
+models:
+  - name: gold_hourly_breach_counts
+    description: |
+      Gold Iceberg table containing hourly breach count
+
+    columns:
+      - name: pk_alert_hour_id
+        description: Primary Key
+        tests:
+          - unique
+          - not_null
+
+      - name: device_id
+        description: Device Id
+
+      - name: hour_ts
+        description: Hour Timestamp
+
+      - name: severity
+        description: Severity
+
+      - name: rule
+        description: Rule
+
+      - name: breach_count
+        description: Breach Count

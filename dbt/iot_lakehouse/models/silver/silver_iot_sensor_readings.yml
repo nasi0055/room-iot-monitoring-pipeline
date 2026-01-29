@@ -1,0 +1,43 @@
+version: 2
+
+models:
+  - name: silver_iot_sensor_readings
+    description: |
+      Silver Iceberg table containing readings from sensor
+
+    columns:
+      - name: pk_sensor_event_id
+        description: Primary Key
+        tests:
+          - unique
+          - not_null
+
+      - name: event_ts
+        description: Event Timestamp
+
+      - name: event_date
+        description: Event Date
+
+      - name: event_hour
+        description: Event Hour
+
+      - name: device_id
+        description: Device ID
+
+      - name: temperature
+        description: Temperature
+
+      - name: humidity
+        description: Humidity
+
+      - name: light
+        description: Light
+
+      - name: co2
+        description: Co2
+
+      - name: humidity_ratio
+        description: Humidity Ratio
+
+      - name: occupancy
+        description: Occupancy

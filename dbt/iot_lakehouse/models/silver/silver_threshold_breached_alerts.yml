@@ -1,0 +1,52 @@
+version: 2
+
+models:
+  - name: silver_threshold_breached_alerts
+    description: |
+      Silver Iceberg table containing alerts sent to users
+
+    columns:
+      - name: pk_alert_event_id
+        description: Primary Key
+        tests:
+          - unique
+          - not_null
+
+      - name: alert_ts
+        description: Alert Timestamp
+
+      - name: alert_date
+        description: Alert Date
+
+      - name: alert_hour
+        description: Alert Hour
+
+      - name: user_id
+        description: User Id
+
+      - name: device_id
+        description: Device Id
+
+      - name: rule
+        description: Rule
+
+      - name: severity
+        description: Severity
+
+      - name: metric
+        description: Metric
+
+      - name: observed_value
+        description: Observed Initial Value
+
+      - name: threshold_value
+        description: Threshold Value
+
+      - name: window_start_ms
+        description: Window Start Time
+
+      - name: window_end_ms
+        description: Window End Time
+
+      - name: rnk
+        description: Rnk

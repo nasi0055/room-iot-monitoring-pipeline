@@ -1,0 +1,22 @@
+version: 2
+
+models:
+  - name: gold_hourly_occupancy_rate
+    description: |
+      Gold Iceberg table containing hourly occupancy rate
+
+    columns:
+      - name: pk_sensor_device_hour_id
+        description: Primary Key
+        tests:
+          - unique
+          - not_null
+
+      - name: device_id
+        description: Device Id
+
+      - name: hour_ts
+        description: Hour Timestamp
+
+      - name: occupancy_rate
+        description: Occupancy Rate

@@ -70,7 +70,7 @@ def _run_dbt_operation(**context):
 
 with DAG(
     dag_id="lakehouse_dbt_pipeline",
-    start_date=datetime(2025, 1, 1),
+    start_date=datetime(2026, 1, 1),
     schedule="0 * * * *",  # hourly
     catchup=False,
     max_active_runs=1,

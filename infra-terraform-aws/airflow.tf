@@ -142,13 +142,14 @@ resource "aws_security_group_rule" "mwaa_ingress_self_all" {
 
 resource "aws_mwaa_environment" "this" {
   name               = "${local.name_prefix}-mwaa"
-  airflow_version    = "2.7.2"
+  airflow_version    = "2.8.1"
   environment_class  = "mw1.small"
   execution_role_arn = aws_iam_role.mwaa.arn
 
   source_bucket_arn = aws_s3_bucket.airflow.arn
   dag_s3_path       = "dags"
   requirements_s3_path = "requirements/requirements.txt"
+  webserver_access_mode = "PUBLIC_ONLY"
 
   startup_script_s3_path = "startup/startup.sh"
   depends_on = [

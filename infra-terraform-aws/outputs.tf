@@ -22,3 +22,11 @@ output "s3_buckets" {
 output "flink_app_name" {
   value = aws_kinesisanalyticsv2_application.flink.name
 }
+
+output "akhq_private_ip" {
+  value = aws_instance.akhq.private_ip
+}
+
+output "akhq_url_over_vpn" {
+  value = "http://${aws_instance.akhq.private_ip}:8080"
+}
