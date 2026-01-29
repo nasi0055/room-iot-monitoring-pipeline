@@ -83,7 +83,10 @@ data "aws_iam_policy_document" "mwaa_policy" {
       "logs:PutLogEvents",
       "logs:GetLogEvents",
       "logs:DescribeLogGroups",
-      "logs:DescribeLogStreams"
+      "logs:DescribeLogStreams",
+      "logs:GetLogRecord",
+      "logs:GetLogGroupFields",
+      "logs:GetQueryResults"
     ]
     resources = ["*"]
   }

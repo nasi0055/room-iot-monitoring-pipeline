@@ -65,10 +65,6 @@ resource "aws_instance" "akhq" {
   user_data = <<-EOF
     #!/bin/bash
 
-    sudo useradd -m newuser
-    echo "newuser:123456" | sudo chpasswd
-    sudo newuser -aG sudo newuser
-
     set -euo pipefail
 
     yum update -y
