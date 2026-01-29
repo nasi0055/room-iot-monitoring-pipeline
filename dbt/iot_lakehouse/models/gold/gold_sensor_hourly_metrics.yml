@@ -1,0 +1,58 @@
+version: 2
+
+models:
+  - name: gold_sensor_hourly_metrics
+    description: |
+      Gold Iceberg table containing hourly sensor reading metrics
+
+    columns:
+      - name: pk_sensor_device_hour_id
+        description: Primary Key
+        tests:
+          - unique
+          - not_null
+
+      - name: device_id
+        description: Device Id
+
+      - name: hour_ts
+        description: Hour Timestamp
+
+      - name: avg_temperature
+        description: Avg Temperature
+
+      - name: min_temperature
+        description: Min Temperature
+
+      - name: max_temperature
+        description: Max Temperature
+
+      - name: avg_humidity
+        description: Avg Humidity
+
+      - name: min_humidity
+        description: Min Humidity
+
+      - name: max_humidity
+        description: Max Humidity
+
+      - name: avg_light
+        description: Avg Light
+
+      - name: min_light
+        description: Min Light
+
+      - name: max_light
+        description: Max Light
+
+      - name: avg_co2
+        description: Avg Co2
+
+      - name: min_co2
+        description: Min Co2
+
+      - name: max_co2
+        description: Max Co2
+
+      - name: avg_humidity_ratio
+        description: Avg Humidity Ratio
