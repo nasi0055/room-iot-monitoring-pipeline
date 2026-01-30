@@ -9,3 +9,4 @@ flink/alerting_job/build
 *__pycache__
 *dbt_packages/
 *dbt.log
+*.pem

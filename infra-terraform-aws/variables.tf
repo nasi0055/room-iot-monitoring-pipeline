@@ -65,3 +65,24 @@ variable "flink_parallelism" {
   type    = number
   default = 1
 }
+
+variable "akhq_instance_type" {
+  type    = string
+  default = "t3.micro"
+}
+
+variable "akhq_port" {
+  type    = number
+  default = 8080
+}
+
+variable "akhq_username" {
+  type    = string
+  default = "admin"
+}
+
+variable "akhq_password" {
+  type      = string
+  sensitive = true
+  default = "admin"
+}
