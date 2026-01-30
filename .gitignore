@@ -10,3 +10,5 @@ flink/alerting_job/build
 *dbt_packages/
 *dbt.log
 *.pem
+*.tfstate
+*.tfstate.*
